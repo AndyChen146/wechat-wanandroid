@@ -1,0 +1,11 @@
+<!-- /pages/system/system.wxml -->
+<view class="page">
+	<block wx:for="{{tixiList}}" wx:key="index">
+		<view class="title">{{item.name}}</view>
+		<view class="flexrow" id="{{index}}" bindtap="tixiclick">
+			<block wx:for="{{item.children}}" wx:key="index">
+				<view class="items" style="background-color:{{colorArr[index%6]}}">{{item.name}}</view>
+			</block>
+		</view>
+	</block>
+</view>
